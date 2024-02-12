@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h1>Hello welcome to my BLog Application</h1>
+    <section class="BlogList">
+    <% if(locals.blogs) {%>
+        <div class="blog">
+        <% blogs.forEach(element => { %>
+            <em><%= element.ID %></em>
+            <img src="<%= element.Imgref %>" alt="img">
+             <h2><%= element.Title %></h2>
+             <h3><%= element.Content %></h3>
+             <button onclick="">Delete</button>
+             
+
+       
+        <% });%>
+       </div>
+        <% } %>
+    </section>
+    <a href="/make">create</a>
+    <a href="/"></a>
+   
+</body>
+</html>
